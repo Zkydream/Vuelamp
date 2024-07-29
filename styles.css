@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    background-color: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.menu-img {
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+button span {
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+}
+
+.lamp-container {
+    position: absolute;
+    top: 0;
+    left: 22%;
+    width: 200px;
+}
+
+.lamp {
+    width: 100%;
+}
+
+.light {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px;
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.text-container {
+    max-width: 60%;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+
+.text-container h1 {
+    font-size: 80px;
+}
+
+.text-container a {
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+    margin-right: 20px;
+}
+
+.line {
+    width: 250px;
+    height: 4px;
+    background: white;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.line span {
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+}
+
+.active {
+    background: #00986f;
+}
+
+.active span {
+    background: white;
+    margin-left: 30px;
+    margin-top: 0;
+}
+
+.on {
+    opacity: 1;
+}
+
+#stiker {
+    position: relative;
+    bottom: 20cm;
+    right: 200cm;
+}   
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .text-container h1 {
+        font-size: 60px;
+    }
+
+    .text-container {
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: fit-content;
+    }
+
+    .text-container {
+        margin: 20% auto;
+        text-align: center;
+        max-width: 80%;
+        font-size: small;
+        margin-top: 8cm;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        position: relative;
+        left: 5cm;
+    }
+
+    .lamp-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 40px;
+    }
+
+    .text-container a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .control {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav button {
+        left: 2cm;
+    }
+}
